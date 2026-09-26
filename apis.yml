@@ -1,23 +1,66 @@
 aid: arkoshealth
+
 name: Arkoshealth
-description: 'Arkoshealth is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://arkoshealth.com/wp-content/uploads/2021/10/care-net-10.jpg
+
+description: 'Arkos Health is a healthcare technology company that partners with payers, providers, and patients to deliver value‑based care solutions. Since 2018, it offers integrated clinical services, care coordination, and data‑driven insights through its proprietary Arkos360 platform, aiming to simplify complex healthcare processes, reduce costs, and improve outcomes across its network of providers and members.'
+
 url: https://raw.githubusercontent.com/api-evangelist/arkoshealth/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Healthcare
+- Technology
+- Value-based Care
+- Platform
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/arkoshealth-hosts.yml
+- type: TermsOfService
+  url: http://arkoshealth.com/terms-conditions/
+- type: PrivacyPolicy
+  url: https://arkoshealth.com/privacy-policy
+- type: Newsroom
+  url: http://arkoshealth.com/category/news/
+- type: DomainSecurity
+  url: security/arkoshealth-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/arkoshealth
+  url: https://arkoshealth.com
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: Arkoshealth provides no public developer program or API documentation.
+  evidence:
+    - url: https://arkoshealth.com
+      status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
